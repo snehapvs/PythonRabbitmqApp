@@ -4,13 +4,13 @@ import numpy as np
 import pickle
 import os
 import logging
-
+log = logging.getLogger("my-logger")
 class PredictorReceiver():
     def on_request(self,ch, method, props, body):
         modelfile ='code_challenge_model.p'
         message = json.loads(body)
         data = np.array(message)
-        logging.info("Received data : " , data)
+        log.info("Received data : " , data)
         response=self.predict(modelfile,data)
         ch.basic_publish(exchange='',
                          routing_key=props.reply_to,
@@ -33,14 +33,14 @@ class PredictorReceiver():
             
     def setup_connection(self):
         amqp_url = os.environ['AMQP_URL']
-        logging.info('Connecting in Receiver to : s' , amqp_url)
+        log.info('Connecting in Receiver to : s' , amqp_url)
         self.parameters = pika.URLParameters(amqp_url)
         self.connection = pika.BlockingConnection(self.parameters)
         self.channel = self.connection.channel()
         self.channel.queue_declare(queue='Predictor')
         self.channel.basic_qos(prefetch_count=1)
         self.channel.basic_consume(queue='Predictor', on_message_callback=self.on_request)
-        logging.info("Awaiting Data requests")
+        log.info("Awaiting Data requests")
         self.channel.start_consuming()
         
         

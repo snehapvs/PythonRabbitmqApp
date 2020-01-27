@@ -5,8 +5,7 @@ import uuid
 import os
 import sys
 import logging
-
-
+log = logging.getLogger("my-logger")
 class Publisher:
     def default(self,obj):
         if type(obj).__module__ == np.__name__:
@@ -25,17 +24,16 @@ class Publisher:
         for row in data1:
             data=[row[1:4]]
             bdy = json.dumps(data, default=self.default)
-            
-            logging.info(" Sent ",bdy," to Queue")
+            print(" Sent ",bdy," to Queue")
             response=self.publish_data_to_predictorqueue(bdy)
-            logging.info(" Probability that the given source belngs to Class 1 :  ",response)
+            print(" Probability that the given source belongs to Class 1 :  ",response)
             
     def setup_queue(self): 
         
         """ create a rabbitmq connection with rpc like setup to send request and receive back the response  """
     
         amqp_url = os.environ['AMQP_URL']
-        logging.info('Connecting in Publisher to : ' , amqp_url)
+        log.info('Connecting in Publisher to : ' , amqp_url)
         self.parameters = pika.URLParameters(amqp_url)
         self.connection = pika.BlockingConnection(self.parameters)
         self.channel = self.connection.channel()
@@ -52,7 +50,6 @@ class Publisher:
         
         self.response = None
         self.corr_id = str(uuid.uuid4())
-        self.channel = self.connection.channel()
         self.channel.basic_publish(
             exchange='',
             routing_key='Predictor',
@@ -75,7 +72,7 @@ class Publisher:
 
 if __name__ == "__main__": 
     args=sys.argv[1:]
-    logging.info("Data source given : ",os.environ['SOURCE'])
+    log.info("Data source given : ",os.environ['SOURCE'])
     datafile=os.environ['SOURCE']
     p=Publisher(datafile)
     
