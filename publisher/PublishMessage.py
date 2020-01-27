@@ -4,6 +4,7 @@ import json,codecs
 import uuid
 import os
 import sys
+import logging
 
 
 class Publisher:
@@ -25,16 +26,16 @@ class Publisher:
             data=[row[1:4]]
             bdy = json.dumps(data, default=self.default)
             
-            print(" [x] Sent ",bdy)
+            logging.info(" Sent ",bdy," to Queue")
             response=self.publish_data_to_predictorqueue(bdy)
-            print(" [.] Got %r" % response)
+            logging.info(" Probability that the given source belngs to Class 1 :  ",response)
             
     def setup_queue(self): 
         
         """ create a rabbitmq connection with rpc like setup to send request and receive back the response  """
     
         amqp_url = os.environ['AMQP_URL']
-        print('URL: %s' % (amqp_url,))
+        logging.info('Connecting in Publisher to : ' , amqp_url)
         self.parameters = pika.URLParameters(amqp_url)
         self.connection = pika.BlockingConnection(self.parameters)
         self.channel = self.connection.channel()
@@ -74,9 +75,8 @@ class Publisher:
 
 if __name__ == "__main__": 
     args=sys.argv[1:]
-    print(os.environ['SOURCE'])
+    logging.info("Data source given : ",os.environ['SOURCE'])
     datafile=os.environ['SOURCE']
-    print(datafile)
     p=Publisher(datafile)
     
 
