@@ -24,9 +24,9 @@ class Publisher:
         for row in data1:
             data=[row[1:4]]
             bdy = json.dumps(data, default=self.default)
-            print(" Sent ",bdy," to Queue")
+            log.info(" Sent ",bdy," to Queue")
             response=self.publish_data_to_predictorqueue(bdy)
-            print(" Probability that the given source belongs to Class 1 :  ",response)
+            log.info(" Probability that the given source belongs to Class 1 :  ",response)
             
     def setup_queue(self): 
         
