@@ -1,0 +1,13 @@
+FROM python:latest
+
+WORKDIR .
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY ReceiveMessage.py .  
+
+COPY code_challenge_model.p .
+
+CMD ["python", "ReceiveMessage.py"]

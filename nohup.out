@@ -1,0 +1,684 @@
+Starting codechallenge_rabbitmq-server_1 ... 
+[1A[2KStarting codechallenge_rabbitmq-server_1 ... [32mdone[0m[1BStarting codechallenge_publisher_1       ... 
+Starting codechallenge_receiver_1        ... 
+[1A[2KStarting codechallenge_receiver_1        ... [32mdone[0m[1B[2A[2KStarting codechallenge_publisher_1       ... [32mdone[0m[2BAttaching to codechallenge_rabbitmq-server_1, codechallenge_receiver_1, codechallenge_publisher_1
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:04 ===
+[36mrabbitmq-server_1  |[0m Starting RabbitMQ 3.6.1 on Erlang 18.3
+[36mrabbitmq-server_1  |[0m Copyright (C) 2007-2016 Pivotal Software, Inc.
+[36mrabbitmq-server_1  |[0m Licensed under the MPL.  See http://www.rabbitmq.com/
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m               RabbitMQ 3.6.1. Copyright (C) 2007-2016 Pivotal Software, Inc.
+[36mrabbitmq-server_1  |[0m   ##  ##      Licensed under the MPL.  See http://www.rabbitmq.com/
+[36mrabbitmq-server_1  |[0m   ##  ##
+[36mrabbitmq-server_1  |[0m   ##########  Logs: tty
+[36mrabbitmq-server_1  |[0m   ######  ##        tty
+[36mrabbitmq-server_1  |[0m   ##########
+[36mrabbitmq-server_1  |[0m               Starting broker...
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:04 ===
+[36mrabbitmq-server_1  |[0m node           : rabbit@rabbitmq-server
+[36mrabbitmq-server_1  |[0m home dir       : /var/lib/rabbitmq
+[36mrabbitmq-server_1  |[0m config file(s) : /etc/rabbitmq/rabbitmq.config
+[36mrabbitmq-server_1  |[0m cookie hash    : 8Mf77ue0p20VAyoS++GETA==
+[36mrabbitmq-server_1  |[0m log            : tty
+[36mrabbitmq-server_1  |[0m sasl log       : tty
+[36mrabbitmq-server_1  |[0m database dir   : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq-server
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m Memory limit set to 1536MB of 3840MB total.
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m Disk free limit set to 50MB
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m Limiting to approx 524188 file handles (471767 sockets)
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m FHC read buffering:  OFF
+[36mrabbitmq-server_1  |[0m FHC write buffering: ON
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m Priority queues enabled, real BQ is rabbit_variable_queue
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m Management plugin: using rates mode 'basic'
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m msg_store_transient: using rabbit_msg_store_ets_index to provide index
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m msg_store_persistent: using rabbit_msg_store_ets_index to provide index
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =WARNING REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m msg_store_persistent: rebuilding indices from scratch
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m started TCP Listener on [::]:5672
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m Management plugin started. Port: 15672
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:06 ===
+[36mrabbitmq-server_1  |[0m Statistics database started.
+[36mrabbitmq-server_1  |[0m  completed with 6 plugins.
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:07 ===
+[36mrabbitmq-server_1  |[0m Server startup complete; 6 plugins started.
+[36mrabbitmq-server_1  |[0m  * rabbitmq_management
+[36mrabbitmq-server_1  |[0m  * rabbitmq_management_agent
+[36mrabbitmq-server_1  |[0m  * amqp_client
+[36mrabbitmq-server_1  |[0m  * rabbitmq_web_dispatch
+[36mrabbitmq-server_1  |[0m  * webmachine
+[36mrabbitmq-server_1  |[0m  * mochiweb
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:07 ===
+[36mrabbitmq-server_1  |[0m accepting AMQP connection <0.313.0> (172.21.0.3:49371 -> 172.21.0.2:5672)
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:07 ===
+[36mrabbitmq-server_1  |[0m accepting AMQP connection <0.328.0> (172.21.0.4:49414 -> 172.21.0.2:5672)
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =INFO REPORT==== 27-Jan-2020::17:54:07 ===
+[36mrabbitmq-server_1  |[0m accepting AMQP connection <0.343.0> (172.21.0.4:49416 -> 172.21.0.2:5672)
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.linear_model.logistic module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.linear_model. Anything that cannot be imported from sklearn.linear_model is now part of the private API.
+[33mreceiver_1         |[0m   warnings.warn(message, FutureWarning)
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[32mpublisher_1        |[0m code_challenge_data1.csv
+[32mpublisher_1        |[0m URL: amqp://rabbitmq-server?connection_attempts=5&retry_delay=2
+[32mpublisher_1        |[0m URL: amqp://rabbitmq-server?connection_attempts=5&retry_delay=2
+[32mpublisher_1        |[0m  [x] Sent  [[0.2896890289586955, 0.28184856983504497, 0.0861283237195608]]
+[32mpublisher_1        |[0m  [.] Got 0.3476055630160459
+[32mpublisher_1        |[0m  [x] Sent  [[0.5995471716179047, 0.536727266032311, 0.36223335231372794]]
+[32mpublisher_1        |[0m  [.] Got 0.6604457021313029
+[32mpublisher_1        |[0m  [x] Sent  [[0.5197639007692548, 0.4775177695943542, 0.278137780616279]]
+[32mpublisher_1        |[0m  [.] Got 0.5793691361213748
+[32mpublisher_1        |[0m  [x] Sent  [[0.3908010930536723, 0.3720506379131954, 0.15865045124226015]]
+[32mpublisher_1        |[0m  [.] Got 0.4439715196672074
+[32mpublisher_1        |[0m  [x] Sent  [[0.9317318736480537, 0.731400330793597, 0.875369602132969]]
+[32mpublisher_1        |[0m  [.] Got 0.9078069465465265
+[32mpublisher_1        |[0m  [x] Sent  [[0.13021474846538872, 0.12948373745864844, 0.018728175850557444]]
+[32mpublisher_1        |[0m  [.] Got 0.23010095166645517
+[32mpublisher_1        |[0m  [x] Sent  [[0.8844936978876661, 0.7086633972826661, 0.7914679402811743]]
+[32mpublisher_1        |[0m  [.] Got 0.8855507255912728
+[32mpublisher_1        |[0m  [x] Sent  [[0.1686046168997951, 0.16702490716586502, 0.03690102105660054]]
+[32mpublisher_1        |[0m  [.] Got 0.25647773588546613
+[32mpublisher_1        |[0m  [x] Sent  [[0.2960984923935489, 0.2877381541901113, 0.09415449143477195]]
+[32mpublisher_1        |[0m  [.] Got 0.35472184601220835
+[32mpublisher_1        |[0m  [x] Sent  [[0.862500329229931, 0.6975436640193479, 0.750130474156153]]
+[32mpublisher_1        |[0m  [.] Got 0.8732015107312433
+[32mpublisher_1        |[0m  [x] Sent  [[0.06515748378968544, 0.06506543146065158, 0.009807453892297199]]
+[32mpublisher_1        |[0m  [.] Got 0.19503680691853842
+[32mpublisher_1        |[0m  [x] Sent  [[0.295349862976346, 0.28705135841808727, 0.08984670414251048]]
+[32mpublisher_1        |[0m  [.] Got 0.35268395994842466
+[32mpublisher_1        |[0m  [x] Sent  [[0.43580466807634, 0.4101609139980121, 0.19022921243748628]]
+[32mpublisher_1        |[0m  [.] Got 0.48779068749150556
+[32mpublisher_1        |[0m  [x] Sent  [[0.4141650519013279, 0.3920034466447323, 0.17996003958024928]]
+[32mpublisher_1        |[0m  [.] Got 0.46862409662781723
+[32mpublisher_1        |[0m  [x] Sent  [[0.9342664153419658, 0.7325768449219215, 0.8743539913808586]]
+[32mpublisher_1        |[0m  [.] Got 0.9081621836691008
+[32mpublisher_1        |[0m  [x] Sent  [[0.42890401067082584, 0.4044049676680986, 0.18451792062844857]]
+[32mpublisher_1        |[0m  [.] Got 0.4807327643500486
+[32mpublisher_1        |[0m  [x] Sent  [[0.6397395383865583, 0.5647221814367238, 0.41744126130016657]]
+[32mpublisher_1        |[0m  [.] Got 0.7019789801297439
+[32mpublisher_1        |[0m  [x] Sent  [[0.5500053587967769, 0.5005242274878892, 0.3047400221728776]]
+[32mpublisher_1        |[0m  [.] Got 0.6090941061217359
+[32mpublisher_1        |[0m  [x] Sent  [[0.4232187524018709, 0.3996385884887571, 0.18715311108321886]]
+[32mpublisher_1        |[0m  [.] Got 0.47777755549120093
+[32mpublisher_1        |[0m  [x] Sent  [[0.03207302365454234, 0.032062030564206735, 0.0074552017936781265]]
+[32mpublisher_1        |[0m  [.] Got 0.17927773654994408
+[32mpublisher_1        |[0m  [x] Sent  [[0.49922241815253887, 0.46150541008066515, 0.24999140591940452]]
+[32mpublisher_1        |[0m  [.] Got 0.5548159263357819
+[32mpublisher_1        |[0m  [x] Sent  [[0.18853690261198164, 0.18633429383815717, 0.04043016561473803]]
+[32mpublisher_1        |[0m  [.] Got 0.2690617526387605
+[32mpublisher_1        |[0m  [x] Sent  [[0.18751783644369246, 0.18535042364168078, 0.03631101444343068]]
+[32mpublisher_1        |[0m  [.] Got 0.26720265481816086
+[32mpublisher_1        |[0m  [x] Sent  [[0.6740117887180405, 0.5876126389112947, 0.4624191951443451]]
+[32mpublisher_1        |[0m  [.] Got 0.7340751591588176
+[32mpublisher_1        |[0m  [x] Sent  [[0.26212329910976806, 0.25628045128244403, 0.06990480505631369]]
+[32mpublisher_1        |[0m  [.] Got 0.32395998315074404
+[32mpublisher_1        |[0m  [x] Sent  [[0.1513694831657435, 0.15022388597063355, 0.024980470274971106]]
+[32mpublisher_1        |[0m  [.] Got 0.2433245938609652
+[32mpublisher_1        |[0m  [x] Sent  [[0.8044331042873177, 0.6665078297741421, 0.6535361095442531]]
+[32mpublisher_1        |[0m  [.] Got 0.8374406041569966
+[32mpublisher_1        |[0m  [x] Sent  [[0.9668962680295271, 0.7473372047189462, 0.9378050763947291]]
+[32mpublisher_1        |[0m  [.] Got 0.921668557614616
+[32mpublisher_1        |[0m  [x] Sent  [[0.45595014772977827, 0.4267777290631015, 0.21516838761819462]]
+[32mpublisher_1        |[0m  [.] Got 0.5115788320777799
+[32mpublisher_1        |[0m  [x] Sent  [[0.5334522926115093, 0.48801561593744025, 0.29213229906013877]]
+[32mpublisher_1        |[0m  [.] Got 0.5936731014446608
+[32mpublisher_1        |[0m  [x] Sent  [[0.11956239795764356, 0.11899591544004012, 0.01957140390364979]]
+[32mpublisher_1        |[0m  [.] Got 0.2247106634549327
+[32mpublisher_1        |[0m  [x] Sent  [[0.5115963712236893, 0.4711880805082603, 0.26743497948295747]]
+[32mpublisher_1        |[0m  [.] Got 0.5698458517014509
+[32mpublisher_1        |[0m  [x] Sent  [[0.46453553314712126, 0.43377357397212757, 0.2159043735599264]]
+[32mpublisher_1        |[0m  [.] Got 0.5178185242361795
+[32mpublisher_1        |[0m  [x] Sent  [[0.14391559332395232, 0.14293017760374543, 0.02725301333310206]]
+[32mpublisher_1        |[0m  [.] Got 0.23988382478914788
+[32mpublisher_1        |[0m  [x] Sent  [[0.9887491980515063, 0.7568284739330619, 0.9807585228184731]]
+[32mpublisher_1        |[0m  [.] Got 0.9296840839932815
+[32mpublisher_1        |[0m  [x] Sent  [[0.21464101388663126, 0.2114044205352322, 0.055177467378864795]]
+[32mpublisher_1        |[0m  [.] Got 0.28930356197547324
+[32mpublisher_1        |[0m  [x] Sent  [[0.36569171285034563, 0.35021756476710153, 0.13389671103644515]]
+[32mpublisher_1        |[0m  [.] Got 0.4169530893834975
+[32mpublisher_1        |[0m  [x] Sent  [[0.9152064999649444, 0.7236218390395682, 0.847549383102853]]
+[32mpublisher_1        |[0m  [.] Got 0.90073724956647
+[32mpublisher_1        |[0m  [x] Sent  [[0.41520342193661075, 0.39288189589727773, 0.17809855215323353]]
+[32mpublisher_1        |[0m  [.] Got 0.4686280732495039
+[32mpublisher_1        |[0m  [x] Sent  [[0.041385139966094164, 0.04136152895403875, 0.006850024543808171]]
+[32mpublisher_1        |[0m  [.] Got 0.1833154342529169
+[32mpublisher_1        |[0m  [x] Sent  [[0.8153809299325302, 0.6725479584232225, 0.6729390838225683]]
+[32mpublisher_1        |[0m  [.] Got 0.8450309507597669
+[32mpublisher_1        |[0m  [x] Sent  [[0.4432158283484403, 0.41630648650603824, 0.20140242063645564]]
+[32mpublisher_1        |[0m  [.] Got 0.49733309721041896
+[32mpublisher_1        |[0m  [x] Sent  [[0.5949364949070343, 0.53343669557646, 0.35574146950877633]]
+[32mpublisher_1        |[0m  [.] Got 0.6554230202346703
+[32mpublisher_1        |[0m  [x] Sent  [[0.43297933679155165, 0.40780817358580096, 0.1944705363403611]]
+[32mpublisher_1        |[0m  [.] Got 0.4874707551464045
+[32mpublisher_1        |[0m  [x] Sent  [[0.7913113146452314, 0.6591512512374381, 0.6272415301037633]]
+[32mpublisher_1        |[0m  [.] Got 0.8272514400186683
+[32mpublisher_1        |[0m  [x] Sent  [[0.9200671725236386, 0.7259291908030802, 0.8516877367650915]]
+[32mpublisher_1        |[0m  [.] Got 0.9023117848920875
+[32mpublisher_1        |[0m  [x] Sent  [[0.2251248846464502, 0.22139723439039516, 0.050803019435301466]]
+[32mpublisher_1        |[0m  [.] Got 0.2943071696369916
+[32mpublisher_1        |[0m  [x] Sent  [[0.2641488405831788, 0.2581719713733245, 0.07198207171890698]]
+[32mpublisher_1        |[0m  [.] Got 0.32597669177997446
+[32mpublisher_1        |[0m  [x] Sent  [[0.5774928865587213, 0.5208408202553104, 0.3351432328785044]]
+[32mpublisher_1        |[0m  [.] Got 0.6374989409450591
+[32mpublisher_1        |[0m  [x] Sent  [[0.38225808535477046, 0.364666878523614, 0.15200081551858818]]
+[32mpublisher_1        |[0m  [.] Got 0.4354290605367437
+[32mpublisher_1        |[0m  [x] Sent  [[0.4699363447966022, 0.438147881180321, 0.22319426083535593]]
+[32mpublisher_1        |[0m  [.] Got 0.5243941979757085
+[32mpublisher_1        |[0m  [x] Sent  [[0.5751054919549762, 0.5190989038237709, 0.3367991976120002]]
+[32mpublisher_1        |[0m  [.] Got 0.6366285472123704
+[32mpublisher_1        |[0m  [x] Sent  [[0.6098956232185485, 0.5440536211817486, 0.3807018430220191]]
+[32mpublisher_1        |[0m  [.] Got 0.6729119523890765
+[32mpublisher_1        |[0m  [x] Sent  [[0.11940456328009075, 0.11884031278473622, 0.01555562731168876]]
+[32mpublisher_1        |[0m  [.] Got 0.22353663299795482
+[32mpublisher_1        |[0m  [x] Sent  [[0.9088644951684212, 0.7205868013756362, 0.8344269790725228]]
+[32mpublisher_1        |[0m  [.] Got 0.8975411253829222
+[32mpublisher_1        |[0m  [x] Sent  [[0.39840779998435616, 0.3785857906614446, 0.1614600368208316]]
+[32mpublisher_1        |[0m  [.] Got 0.4503886382286339
+[32mpublisher_1        |[0m  [x] Sent  [[0.4940476035742821, 0.4574230519274105, 0.25039997616894527]]
+[32mpublisher_1        |[0m  [.] Got 0.5514681372821216
+[32mpublisher_1        |[0m  [x] Sent  [[0.6122303664619698, 0.5456952054683917, 0.37703413690843657]]
+[32mpublisher_1        |[0m  [.] Got 0.6729992143623013
+[32mpublisher_1        |[0m  [x] Sent  [[0.896317042553327, 0.7144998390311952, 0.8110342850741743]]
+[32mpublisher_1        |[0m  [.] Got 0.8913272610919533
+[32mpublisher_1        |[0m  [x] Sent  [[0.16202311259958457, 0.16062006098403972, 0.02715228277402027]]
+[32mpublisher_1        |[0m  [.] Got 0.24987764293028566
+[32mpublisher_1        |[0m  [x] Sent  [[0.41416719026032556, 0.3920052564076377, 0.1808013463159113]]
+[32mpublisher_1        |[0m  [.] Got 0.46895307915131756
+[32mpublisher_1        |[0m  [x] Sent  [[0.9103717458435931, 0.7213106324593983, 0.8365892762856981]]
+[32mpublisher_1        |[0m  [.] Got 0.8981725472509661
+[32mpublisher_1        |[0m  [x] Sent  [[0.40289415971982045, 0.3824225905748326, 0.17122014348258383]]
+[32mpublisher_1        |[0m  [.] Got 0.4573170881104076
+[32mpublisher_1        |[0m  [x] Sent  [[0.7866281899572758, 0.6564946711632861, 0.6240386703709684]]
+[32mpublisher_1        |[0m  [.] Got 0.8248886296536593
+[32mpublisher_1        |[0m  [x] Sent  [[0.3918367538368249, 0.3729425967868235, 0.15638396078272343]]
+[32mpublisher_1        |[0m  [.] Got 0.44382255199791915
+[32mpublisher_1        |[0m  [x] Sent  [[0.37726292544608886, 0.36032811736357406, 0.14525979370558442]]
+[32mpublisher_1        |[0m  [.] Got 0.4293515824680955
+[32mpublisher_1        |[0m  [x] Sent  [[0.5539927831304036, 0.503506736020094, 0.3112869774488619]]
+[32mpublisher_1        |[0m  [.] Got 0.6140689680194213
+[32mpublisher_1        |[0m  [x] Sent  [[0.8069972113825479, 0.6679304423253646, 0.6610249664870272]]
+[32mpublisher_1        |[0m  [.] Got 0.8398662010729266
+[32mpublisher_1        |[0m  [x] Sent  [[0.958057997120376, 0.7434093804362519, 0.925257020508315]]
+[32mpublisher_1        |[0m  [.] Got 0.9187508939958962
+[32mpublisher_1        |[0m  [x] Sent  [[0.6098875775151454, 0.5440479569362421, 0.3817677891676729]]
+[32mpublisher_1        |[0m  [.] Got 0.6732739282915478
+[32mpublisher_1        |[0m  [x] Sent  [[0.773273831329665, 0.6488290952512943, 0.5994963394390723]]
+[32mpublisher_1        |[0m  [.] Got 0.8143797016856686
+[32mpublisher_1        |[0m  [x] Sent  [[0.4020134206200723, 0.38167040380654066, 0.16856355713708907]]
+[32mpublisher_1        |[0m  [.] Got 0.45566876392849687
+[32mpublisher_1        |[0m  [x] Sent  [[0.8293791269735761, 0.6801424859820621, 0.6894016927048502]]
+[32mpublisher_1        |[0m  [.] Got 0.8526585807524161
+[32mpublisher_1        |[0m  [x] Sent  [[0.23738969813462862, 0.23302869951204438, 0.06219239322501265]]
+[32mpublisher_1        |[0m  [.] Got 0.3056560067703581
+[32mpublisher_1        |[0m  [x] Sent  [[0.3438722193105396, 0.33092995640241624, 0.12365966698458059]]
+[32mpublisher_1        |[0m  [.] Got 0.39798022014839357
+[32mpublisher_1        |[0m  [x] Sent  [[0.4675730156156549, 0.4362362728414711, 0.22390779948869427]]
+[32mpublisher_1        |[0m  [.] Got 0.5230408885649647
+[32mpublisher_1        |[0m  [x] Sent  [[0.0823533232660909, 0.0821676516147341, 0.014824300696429447]]
+[32mpublisher_1        |[0m  [.] Got 0.20458522562230158
+[32mpublisher_1        |[0m  [x] Sent  [[0.7161618921675608, 0.614526260164651, 0.5185652379418643]]
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m /usr/local/lib/python3.8/site-packages/sklearn/base.py:313: UserWarning: Trying to unpickle estimator LogisticRegressionCV from version 0.20.0 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+[33mreceiver_1         |[0m   warnings.warn(
+[33mreceiver_1         |[0m URL: amqp://rabbitmq-server?connection_attempts=5&retry_delay=2
+[33mreceiver_1         |[0m Awaiting RPC requests
+[33mreceiver_1         |[0m  [x] Received array([[0.28968903, 0.28184857, 0.08612832]])
+[33mreceiver_1         |[0m 0.3476055630160459 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.59954717, 0.53672727, 0.36223335]])
+[33mreceiver_1         |[0m 0.6604457021313029 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.5197639 , 0.47751777, 0.27813778]])
+[33mreceiver_1         |[0m 0.5793691361213748 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.39080109, 0.37205064, 0.15865045]])
+[33mreceiver_1         |[0m 0.4439715196672074 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.93173187, 0.73140033, 0.8753696 ]])
+[33mreceiver_1         |[0m 0.9078069465465265 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.13021475, 0.12948374, 0.01872818]])
+[33mreceiver_1         |[0m 0.23010095166645517 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.8844937 , 0.7086634 , 0.79146794]])
+[33mreceiver_1         |[0m 0.8855507255912728 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.16860462, 0.16702491, 0.03690102]])
+[33mreceiver_1         |[0m 0.25647773588546613 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.29609849, 0.28773815, 0.09415449]])
+[33mreceiver_1         |[0m 0.35472184601220835 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.86250033, 0.69754366, 0.75013047]])
+[33mreceiver_1         |[0m 0.8732015107312433 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.06515748, 0.06506543, 0.00980745]])
+[33mreceiver_1         |[0m 0.19503680691853842 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.29534986, 0.28705136, 0.0898467 ]])
+[33mreceiver_1         |[0m 0.35268395994842466 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.43580467, 0.41016091, 0.19022921]])
+[33mreceiver_1         |[0m 0.48779068749150556 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.41416505, 0.39200345, 0.17996004]])
+[33mreceiver_1         |[0m 0.46862409662781723 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.93426642, 0.73257684, 0.87435399]])
+[33mreceiver_1         |[0m 0.9081621836691008 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.42890401, 0.40440497, 0.18451792]])
+[33mreceiver_1         |[0m 0.4807327643500486 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.63973954, 0.56472218, 0.41744126]])
+[33mreceiver_1         |[0m 0.7019789801297439 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.55000536, 0.50052423, 0.30474002]])
+[33mreceiver_1         |[0m 0.6090941061217359 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.42321875, 0.39963859, 0.18715311]])
+[33mreceiver_1         |[0m 0.47777755549120093 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.03207302, 0.03206203, 0.0074552 ]])
+[33mreceiver_1         |[0m 0.17927773654994408 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.49922242, 0.46150541, 0.24999141]])
+[33mreceiver_1         |[0m 0.5548159263357819 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.1885369 , 0.18633429, 0.04043017]])
+[33mreceiver_1         |[0m 0.2690617526387605 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.18751784, 0.18535042, 0.03631101]])
+[33mreceiver_1         |[0m 0.26720265481816086 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.67401179, 0.58761264, 0.4624192 ]])
+[33mreceiver_1         |[0m 0.7340751591588176 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.2621233 , 0.25628045, 0.06990481]])
+[33mreceiver_1         |[0m 0.32395998315074404 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.15136948, 0.15022389, 0.02498047]])
+[33mreceiver_1         |[0m 0.2433245938609652 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.8044331 , 0.66650783, 0.65353611]])
+[33mreceiver_1         |[0m 0.8374406041569966 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.96689627, 0.7473372 , 0.93780508]])
+[33mreceiver_1         |[0m 0.921668557614616 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.45595015, 0.42677773, 0.21516839]])
+[33mreceiver_1         |[0m 0.5115788320777799 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.53345229, 0.48801562, 0.2921323 ]])
+[33mreceiver_1         |[0m 0.5936731014446608 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.1195624 , 0.11899592, 0.0195714 ]])
+[33mreceiver_1         |[0m 0.2247106634549327 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.51159637, 0.47118808, 0.26743498]])
+[33mreceiver_1         |[0m 0.5698458517014509 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.46453553, 0.43377357, 0.21590437]])
+[33mreceiver_1         |[0m 0.5178185242361795 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.14391559, 0.14293018, 0.02725301]])
+[33mreceiver_1         |[0m 0.23988382478914788 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.9887492 , 0.75682847, 0.98075852]])
+[33mreceiver_1         |[0m 0.9296840839932815 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.21464101, 0.21140442, 0.05517747]])
+[33mreceiver_1         |[0m 0.28930356197547324 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.36569171, 0.35021756, 0.13389671]])
+[33mreceiver_1         |[0m 0.4169530893834975 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.9152065 , 0.72362184, 0.84754938]])
+[33mreceiver_1         |[0m 0.90073724956647 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.41520342, 0.3928819 , 0.17809855]])
+[33mreceiver_1         |[0m 0.4686280732495039 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.04138514, 0.04136153, 0.00685002]])
+[33mreceiver_1         |[0m 0.1833154342529169 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.81538093, 0.67254796, 0.67293908]])
+[33mreceiver_1         |[0m 0.8450309507597669 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.44321583, 0.41630649, 0.20140242]])
+[33mreceiver_1         |[0m 0.49733309721041896 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.59493649, 0.5334367 , 0.35574147]])
+[33mreceiver_1         |[0m 0.6554230202346703 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.43297934, 0.40780817, 0.19447054]])
+[32mpublisher_1        |[0m  [.] Got 0.7703264913380379
+[32mpublisher_1        |[0m  [x] Sent  [[0.02454176825436971, 0.024536842285299575, 0.00966292731100099]]
+[32mpublisher_1        |[0m  [.] Got 0.17645246945229182
+[32mpublisher_1        |[0m  [x] Sent  [[0.9527656310349832, 0.7410325510033957, 0.9175249352212952]]
+[32mpublisher_1        |[0m  [.] Got 0.916928162004546
+[32mpublisher_1        |[0m  [x] Sent  [[0.7770600764286144, 0.6510160270132622, 0.6088967741030372]]
+[32mpublisher_1        |[0m  [.] Got 0.817979548981603
+[32mpublisher_1        |[0m  [x] Sent  [[0.08361724828825945, 0.08342291218613318, 0.011041213129349277]]
+[32mpublisher_1        |[0m  [.] Got 0.20424338650295507
+[32mpublisher_1        |[0m  [x] Sent  [[0.7603663869038663, 0.641292719832789, 0.5834303780936808]]
+[32mpublisher_1        |[0m  [.] Got 0.805619617066569
+[32mpublisher_1        |[0m  [x] Sent  [[0.6181851058039164, 0.5498631303116067, 0.38596514441466406]]
+[32mpublisher_1        |[0m  [.] Got 0.6794726752570336
+[32mpublisher_1        |[0m  [x] Sent  [[0.8457858041658026, 0.688861459732368, 0.718857680115766]]
+[32mpublisher_1        |[0m  [.] Got 0.8630590475555413
+[32mpublisher_1        |[0m  [x] Sent  [[0.10553688546833873, 0.10514679881589349, 0.014813165428230139]]
+[32mpublisher_1        |[0m  [.] Got 0.21618359642638305
+[32mpublisher_1        |[0m  [x] Sent  [[0.14166038836090056, 0.1407203357362492, 0.022163240363658004]]
+[32mpublisher_1        |[0m  [.] Got 0.2372107451425137
+[32mpublisher_1        |[0m  [x] Sent  [[0.836934185869326, 0.6841817885886896, 0.709464429398571]]
+[32mpublisher_1        |[0m  [.] Got 0.8587673223223793
+[32mpublisher_1        |[0m  [x] Sent  [[0.8928308083354798, 0.712789107960569, 0.8002194491528096]]
+[32mpublisher_1        |[0m  [.] Got 0.8888758546050578
+[32mpublisher_1        |[0m  [x] Sent  [[0.3598923503669602, 0.3451192098795572, 0.1340045867448199]]
+[32mpublisher_1        |[0m  [.] Got 0.41296444454041575
+[32mpublisher_1        |[0m  [x] Sent  [[0.7075379340945702, 0.6091306141225676, 0.5018552596624586]]
+[32mpublisher_1        |[0m  [.] Got 0.7617492896413679
+[32mpublisher_1        |[0m  [x] Sent  [[0.6463703785652277, 0.5692214589429941, 0.4230020954766245]]
+[32mpublisher_1        |[0m  [.] Got 0.707364988116036
+[32mpublisher_1        |[0m  [x] Sent  [[0.6662512029038836, 0.5825085215905055, 0.4487284461387851]]
+[32mpublisher_1        |[0m  [.] Got 0.7259354719415204
+[32mpublisher_1        |[0m  [x] Sent  [[0.3033986234662751, 0.2944197302030076, 0.09434600667214085]]
+[32mpublisher_1        |[0m  [.] Got 0.35966943285875264
+[32mpublisher_1        |[0m  [x] Sent  [[0.4777652647371917, 0.44445210175179406, 0.23051247919889703]]
+[32mpublisher_1        |[0m  [.] Got 0.5326342514296245
+[32mpublisher_1        |[0m  [x] Sent  [[0.6428233500809719, 0.566818873192762, 0.419937329293289]]
+[32mpublisher_1        |[0m  [.] Got 0.7044628063701357
+[32mpublisher_1        |[0m  [x] Sent  [[0.537099566127561, 0.4907893082923006, 0.290674445097446]]
+[32mpublisher_1        |[0m  [.] Got 0.595499821779939
+[32mpublisher_1        |[0m  [x] Sent  [[0.46636036838067374, 0.4352538756973327, 0.22382395612540862]]
+[32mpublisher_1        |[0m  [.] Got 0.5221703572669911
+[32mpublisher_1        |[0m  [x] Sent  [[0.0038267152576481056, 0.0038266965786040966, 0.0009457756009024997]]
+[32mpublisher_1        |[0m  [.] Got 0.1656401660221981
+[32mpublisher_1        |[0m  [x] Sent  [[0.8688463783413769, 0.7007875310190913, 0.7639062670130885]]
+[32mpublisher_1        |[0m  [.] Got 0.8771939727929031
+[33mreceiver_1         |[0m 0.4874707551464045 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.79131131, 0.65915125, 0.62724153]])
+[33mreceiver_1         |[0m 0.8272514400186683 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.92006717, 0.72592919, 0.85168774]])
+[33mreceiver_1         |[0m 0.9023117848920875 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.22512488, 0.22139723, 0.05080302]])
+[33mreceiver_1         |[0m 0.2943071696369916 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.26414884, 0.25817197, 0.07198207]])
+[33mreceiver_1         |[0m 0.32597669177997446 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.57749289, 0.52084082, 0.33514323]])
+[33mreceiver_1         |[0m 0.6374989409450591 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.38225809, 0.36466688, 0.15200082]])
+[33mreceiver_1         |[0m 0.4354290605367437 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.46993634, 0.43814788, 0.22319426]])
+[33mreceiver_1         |[0m 0.5243941979757085 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.57510549, 0.5190989 , 0.3367992 ]])
+[33mreceiver_1         |[0m 0.6366285472123704 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.60989562, 0.54405362, 0.38070184]])
+[33mreceiver_1         |[0m 0.6729119523890765 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.11940456, 0.11884031, 0.01555563]])
+[33mreceiver_1         |[0m 0.22353663299795482 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.9088645 , 0.7205868 , 0.83442698]])
+[33mreceiver_1         |[0m 0.8975411253829222 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.3984078 , 0.37858579, 0.16146004]])
+[33mreceiver_1         |[0m 0.4503886382286339 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.4940476 , 0.45742305, 0.25039998]])
+[33mreceiver_1         |[0m 0.5514681372821216 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.61223037, 0.54569521, 0.37703414]])
+[33mreceiver_1         |[0m 0.6729992143623013 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.89631704, 0.71449984, 0.81103429]])
+[33mreceiver_1         |[0m 0.8913272610919533 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.16202311, 0.16062006, 0.02715228]])
+[33mreceiver_1         |[0m 0.24987764293028566 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.41416719, 0.39200526, 0.18080135]])
+[33mreceiver_1         |[0m 0.46895307915131756 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.91037175, 0.72131063, 0.83658928]])
+[33mreceiver_1         |[0m 0.8981725472509661 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.40289416, 0.38242259, 0.17122014]])
+[33mreceiver_1         |[0m 0.4573170881104076 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.78662819, 0.65649467, 0.62403867]])
+[33mreceiver_1         |[0m 0.8248886296536593 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.39183675, 0.3729426 , 0.15638396]])
+[33mreceiver_1         |[0m 0.44382255199791915 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.37726293, 0.36032812, 0.14525979]])
+[33mreceiver_1         |[0m 0.4293515824680955 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.55399278, 0.50350674, 0.31128698]])
+[33mreceiver_1         |[0m 0.6140689680194213 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.80699721, 0.66793044, 0.66102497]])
+[33mreceiver_1         |[0m 0.8398662010729266 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.958058  , 0.74340938, 0.92525702]])
+[33mreceiver_1         |[0m 0.9187508939958962 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.60988758, 0.54404796, 0.38176779]])
+[33mreceiver_1         |[0m 0.6732739282915478 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.77327383, 0.6488291 , 0.59949634]])
+[33mreceiver_1         |[0m 0.8143797016856686 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.40201342, 0.3816704 , 0.16856356]])
+[33mreceiver_1         |[0m 0.45566876392849687 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.82937913, 0.68014249, 0.68940169]])
+[33mreceiver_1         |[0m 0.8526585807524161 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.2373897 , 0.2330287 , 0.06219239]])
+[33mreceiver_1         |[0m 0.3056560067703581 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.34387222, 0.33092996, 0.12365967]])
+[33mreceiver_1         |[0m 0.39798022014839357 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.46757302, 0.43623627, 0.2239078 ]])
+[33mreceiver_1         |[0m 0.5230408885649647 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.08235332, 0.08216765, 0.0148243 ]])
+[33mreceiver_1         |[0m 0.20458522562230158 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.71616189, 0.61452626, 0.51856524]])
+[33mreceiver_1         |[0m 0.7703264913380379 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.02454177, 0.02453684, 0.00966293]])
+[33mreceiver_1         |[0m 0.17645246945229182 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.95276563, 0.74103255, 0.91752494]])
+[33mreceiver_1         |[0m 0.916928162004546 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.77706008, 0.65101603, 0.60889677]])
+[33mreceiver_1         |[0m 0.817979548981603 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.08361725, 0.08342291, 0.01104121]])
+[33mreceiver_1         |[0m 0.20424338650295507 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.76036639, 0.64129272, 0.58343038]])
+[33mreceiver_1         |[0m 0.805619617066569 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.61818511, 0.54986313, 0.38596514]])
+[33mreceiver_1         |[0m 0.6794726752570336 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.8457858 , 0.68886146, 0.71885768]])
+[33mreceiver_1         |[0m 0.8630590475555413 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.10553689, 0.1051468 , 0.01481317]])
+[33mreceiver_1         |[0m 0.21618359642638305 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.14166039, 0.14072034, 0.02216324]])
+[33mreceiver_1         |[0m 0.2372107451425137 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.83693419, 0.68418179, 0.70946443]])
+[33mreceiver_1         |[0m 0.8587673223223793 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.89283081, 0.71278911, 0.80021945]])
+[33mreceiver_1         |[0m 0.8888758546050578 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.35989235, 0.34511921, 0.13400459]])
+[33mreceiver_1         |[0m 0.41296444454041575 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.70753793, 0.60913061, 0.50185526]])
+[33mreceiver_1         |[0m 0.7617492896413679 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.64637038, 0.56922146, 0.4230021 ]])
+[33mreceiver_1         |[0m 0.707364988116036 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.6662512 , 0.58250852, 0.44872845]])
+[33mreceiver_1         |[0m 0.7259354719415204 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.30339862, 0.29441973, 0.09434601]])
+[33mreceiver_1         |[0m 0.35966943285875264 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.47776526, 0.4444521 , 0.23051248]])
+[33mreceiver_1         |[0m 0.5326342514296245 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.64282335, 0.56681887, 0.41993733]])
+[33mreceiver_1         |[0m 0.7044628063701357 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.53709957, 0.49078931, 0.29067445]])
+[33mreceiver_1         |[0m 0.595499821779939 a1
+[33mreceiver_1         |[0m  [x] Received array([[0.46636037, 0.43525388, 0.22382396]])
+[33mreceiver_1         |[0m 0.5221703572669911 a1
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =WARNING REPORT==== 27-Jan-2020::17:54:08 ===
+[36mrabbitmq-server_1  |[0m closing AMQP connection <0.328.0> (172.21.0.4:49414 -> 172.21.0.2:5672):
+[36mrabbitmq-server_1  |[0m client unexpectedly closed TCP connection
+[36mrabbitmq-server_1  |[0m 
+[36mrabbitmq-server_1  |[0m =WARNING REPORT==== 27-Jan-2020::17:54:08 ===
+[36mrabbitmq-server_1  |[0m closing AMQP connection <0.343.0> (172.21.0.4:49416 -> 172.21.0.2:5672):
+[36mrabbitmq-server_1  |[0m client unexpectedly closed TCP connection
+[32mcodechallenge_publisher_1 exited with code 0
+[0mStopping codechallenge_receiver_1        ... 
+Stopping codechallenge_rabbitmq-server_1 ... 
+[2A[2KStopping codechallenge_receiver_1        ... [32mdone[0m[2B[1A[2KStopping codechallenge_rabbitmq-server_1 ... [32mdone[0m[1BGracefully stopping... (press Ctrl+C again to force)

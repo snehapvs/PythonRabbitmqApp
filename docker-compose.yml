@@ -1,0 +1,40 @@
+version: '2'
+services:
+  # RabbitMQ
+  rabbitmq-server:
+    hostname: rabbitmq-server
+    image: rabbitmq:3.6.1-management
+    ports:
+      - "5672:5672"  
+      - "15672:15672"  
+
+  receiver:
+    depends_on:
+      - rabbitmq-server
+    build: receiver
+    environment:
+      # The location of the RabbitMQ server.  "amqp" is the protocol;
+      # "rabbitmq" is the hostname.  Note that there is not a guarantee
+      # that the server will start first!  Telling the pika client library
+      # to try multiple times gets around this ordering issue.
+      AMQP_URL: 'amqp://rabbitmq-server?connection_attempts=5&retry_delay=2'
+      SOURCE: '$SOURCE'
+
+    links:
+      - rabbitmq-server
+
+  publisher:
+    depends_on:
+      - rabbitmq-server
+
+    # If needed, Docker Compose will automatically run Publisher/Dockerfile.
+    build: publisher
+    environment:
+      AMQP_URL: 'amqp://rabbitmq-server?connection_attempts=5&retry_delay=2'
+      SOURCE: '$SOURCE'
+    links:
+      - rabbitmq-server
+      
+
+
+

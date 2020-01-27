@@ -1,0 +1,15 @@
+FROM python:latest
+
+WORKDIR .
+
+COPY requirements.txt .
+
+COPY code_challenge_data1.csv .
+
+COPY code_challenge_data2.csv .
+
+RUN pip install -r requirements.txt
+
+COPY PublishMessage.py .  
+
+CMD ["python", "PublishMessage.py", "1"]
