@@ -3,7 +3,7 @@ services:
   # RabbitMQ
   rabbitmq-server:
     hostname: rabbitmq-server
-    image: rabbitmq:3.6.1-management
+    image: rabbitmq:3-management
     ports:
       - "5672:5672"  
       - "15672:15672"  

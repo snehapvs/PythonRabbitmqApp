@@ -1,16 +1,21 @@
 import pika
-import json,codecs
+import json
 import numpy as np
 import pickle
 import os
-import logging
-log = logging.getLogger("my-logger")
+import warnings
+warnings.filterwarnings("ignore")
+
+"""
+docker-compose build
+env SOURCE='code_challenge_data1.csv' docker-compose up
+"""
 class PredictorReceiver():
     def on_request(self,ch, method, props, body):
         modelfile ='code_challenge_model.p'
         message = json.loads(body)
         data = np.array(message)
-        log.info("Received data : " , data)
+        print("Received data : " , data)
         response=self.predict(modelfile,data)
         ch.basic_publish(exchange='',
                          routing_key=props.reply_to,
@@ -22,8 +27,8 @@ class PredictorReceiver():
     def predict(self,modelfile,data):
         infile = open(modelfile,'rb')
         model = pickle.load(infile, encoding='bytes')
-        a1=model.predict_proba(data)[0,1]
-        return a1
+        prob=model.predict_proba(data)[0,1]
+        return prob
     
     def __init__(self):
 
@@ -33,14 +38,14 @@ class PredictorReceiver():
             
     def setup_connection(self):
         amqp_url = os.environ['AMQP_URL']
-        log.info('Connecting in Receiver to : s' , amqp_url)
+        print('Connecting in Receiver to : ' , amqp_url)
         self.parameters = pika.URLParameters(amqp_url)
         self.connection = pika.BlockingConnection(self.parameters)
         self.channel = self.connection.channel()
         self.channel.queue_declare(queue='Predictor')
         self.channel.basic_qos(prefetch_count=1)
         self.channel.basic_consume(queue='Predictor', on_message_callback=self.on_request)
-        log.info("Awaiting Data requests")
+        print("Awaiting Data requests")
         self.channel.start_consuming()
         
         
