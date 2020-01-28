@@ -1,24 +1,23 @@
-"""
-docker-compose build
-env SOURCE='code_challenge_data1.csv' 
-docker-compose up
-"""
-## Prerequisites
+## Code Challenge
+#### Prerequisites
 * Docker
 
 #### Running the application:
-
+```sh
 $ docker-compose up // from application's location
-
+``` 
 From browser run the following 
-http://localhost:5001/api/predict/<dataSource> 
+` http://localhost:5001/api/predict/<dataSource> `
   Ex:
-  http://localhost:5001/api/predict/code_challenge_data2.csv
+  ` http://localhost:5001/api/predict/code_challenge_data1.csv ` for first input data source
+  ` http://localhost:5001/api/predict/code_challenge_data2.csv ` for second input data source
   
  or 
  From Terminal Run the follwoing to input first data source
+ 
  `curl -X GET \
   'http://localhost:5001/api/predict/code_challenge_data1.csv'`
+  
   or to give second data source as input
   `curl -X GET \
   'http://localhost:5001/api/predict/code_challenge_data2.csv'`
