@@ -32,7 +32,7 @@ $ docker-compose up // from application's location
 * Added Publisher and Receiver as different services and respective requirements and dockerfile is added accordingly.
 * Rabbitmq configuration is added in the docker-compsoe file directly
 * Used Flask-restful to add a API endpoint to switch between input data sources easyly (this could be done via an environment variable too)
-* Sending one row at a time to the queue from the publisher,As data file can be huge and sending the full data to queue might not be ideal in that case.
+* Sending one row at a time to the queue from the publisher,As data file can be huge and sending the full data to queue might not be ideal in that case. Also,Giving predicted probability data as a list with each row's probability separately.
 
 
 ### Python Modules Used : all modules are mentioned in requiements.txt 
@@ -41,5 +41,6 @@ $ docker-compose up // from application's location
 * numpy for data processing
 
 ### Improvements:
-* Tests can be added and Exception handling could be handled better
+* Tests can be added and Exceptions can be handled better
+* Here since the the data files are already available,the input service is taken as a GET request with the datafile name as a string param.To make it more dynamic, we can use a POST service and upload file from there directly.
 
