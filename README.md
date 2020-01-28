@@ -27,7 +27,7 @@ $ docker-compose up // from application's location
   
   `curl -X GET 'http://localhost:5001/api/predict/code_challenge_data2.csv'`
   
-## Design Constaints and Assumptions:
+### Design Constaints and Assumptions:
 * Used print statements in place of logging.info as logging module is efefcting pika module for establishing rabbitmq server conenction
 * Added Publisher and Receiver as different services and respective requirements and dockerfile is added accordingly.
 * Rabbitmq configuration is added in the docker-compsoe file directly
@@ -35,11 +35,11 @@ $ docker-compose up // from application's location
 * Sending one row at a time to the queue from the publisher,As data file can be huge and sending the full data to queue might not be ideal in that case.
 
 
-## Python Modules Used : all modules are mentioned in requiements.txt 
+### Python Modules Used : all modules are mentioned in requiements.txt 
 * pika for rabbitmq module
 * flask-restful for to publish different data sources to queue
 * numpy for data processing
 
-## Improvements:
+### Improvements:
 * Tests can be added and Exception handling could be handled better
 
