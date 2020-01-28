@@ -1,43 +1,27 @@
 import pika
 import numpy as np
-import json,codecs
+import json
 import uuid
 import os
-import sys
 import logging
-import time
-
+from flask import Flask
+from flask_restful import Resource, Api
 logging.getLogger('pika').setLevel(logging.INFO)
 
-class Publisher:
-    def default(self,obj):
-        if type(obj).__module__ == np.__name__:
-            if isinstance(obj, np.ndarray):
-                return obj.tolist()
-            else:
-                return obj.item()
-        raise TypeError('Unknown type:', type(obj))
 
-    def __init__(self,datafile):
-        self.setup_queue() #create a rabbitmq queue
+class Publisher:
+    def __init__(self):
+        self.setup_queue()  # create a rabbitmq queue
         if self.connection or self.connection.is_closed:
             self.setup_queue()
-        data1 = np.loadtxt(datafile, delimiter=',', skiprows=1)
-        data1.reshape(-1,1)
-        for row in data1:
-            data=[row[1:4]]
-            bdy = json.dumps(data, default=self.default)
-            print("Sent ",bdy, " to Queue")
-            response=self.publish_data_to_predictorqueue(bdy)
-            print(" Probability that the given source belongs to Class 1 : ",response)
-            time.sleep(10)
-            
+           
     def setup_queue(self): 
-        
-        """ create a rabbitmq connection with rpc like setup to send request and receive back the response  """
+       
+        """ create a rabbitmq connection with rpc like setup to send request 
+        and receive back the response  """
     
         amqp_url = os.environ['AMQP_URL']
-        print('Connecting in Publisher to : ' , amqp_url)
+        print('Connecting in Publisher to : ', amqp_url)
         self.parameters = pika.URLParameters(amqp_url)
         self.connection = pika.BlockingConnection(self.parameters)
         self.channel = self.connection.channel()
@@ -50,7 +34,8 @@ class Publisher:
          
     def publish_data_to_predictorqueue(self, data):
         
-        """sending data to predictor and setting up the call back queue to receive back the response"""
+        """sending data to predictor and setting up the call back queue 
+        to receive back the response"""
         
         self.response = None
         self.corr_id = str(uuid.uuid4())
@@ -66,18 +51,79 @@ class Publisher:
             self.connection.process_data_events()
         return float(self.response)
 
-
     def on_response(self, ch, method, props, body):
         
-        """ get response and compare the correlation id to process the response"""
+        """get response and compare the correlation id 
+        to process the response"""
         
         if self.corr_id == props.correlation_id:
             self.response = body
-
-if __name__ == "__main__": 
-    args=sys.argv[1:]
-    print("Data source given : %r ",os.environ['SOURCE'])
-    datafile=os.environ['SOURCE']
-    p=Publisher(datafile)
+            
+            
+class DataSourceHandler(Resource):
     
+    def dataDefault(self, obj):
+        
+        """ default object to process data from json """
+        
+        if type(obj).__module__ == np.__name__:
+            if isinstance(obj, np.ndarray):
+                return obj.tolist()
+            else:
+                return obj.item()
+        raise TypeError('Unknown type:', type(obj))
+    
+    def get(self, dataSource):
+        
+        """ API method to return probability data response """ 
+        try:
+            print("Data source given : ", dataSource)
+            try:
+                publisher = Publisher()
+            except:
+                result = {"Error" :"There is an error in Establishing Rabbitmq connection in publisher"}
+            try:
+                sourceData = self.getSourceData(dataSource)
+                result = self.getResponseProbabilityData(sourceData, dataSource, publisher)
+            except:
+                result = {"Error" :"There is an error in Processing data"}
+            
+            return (json.loads(json.dumps(result)))
+        except:
+            result = {"Error" :"There is an error in Publishing data"}
+            return result
+        
+    
+    def getSourceData(self, dataSource):
+        
+        """processing data with numpy"""
+        
+        sourceData = np.loadtxt(dataSource, delimiter=',', skiprows=1)
+        sourceData.reshape(-1, 1)
+        return sourceData
+    
+    def getResponseProbabilityData(self, sourceData, dataSource, publisher):
+        
+        """getting predictor data result, sending one row at a time to the queue
+        assuming data file can be huge """
+        
+        result = []
+        for row in sourceData: 
+            requestData = row[1:4]
+            requestData = requestData.reshape(1, -1)
+            requestBody = json.dumps(requestData, default=self.dataDefault)
+            print("Sent ", requestBody, " to Queue")
+            response = publisher.publish_data_to_predictorqueue(requestBody)
+            print(" Probability that the given source belongs to Class 1 : ", response)
+            result.append({'dataSource': dataSource,
+                           'inputData': requestBody, 'probability': response})
+        return result
+    
+    
+app = Flask(__name__)
+api = Api(app)
+api.add_resource(DataSourceHandler, "/api/predict/<dataSource>")
 
+  
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80, debug=True)

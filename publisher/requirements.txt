@@ -1,2 +1,4 @@
 numpy
 pika
+Flask
+flask-restful

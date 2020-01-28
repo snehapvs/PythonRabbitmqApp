@@ -3,7 +3,7 @@ services:
   # RabbitMQ
   rabbitmq-server:
     hostname: rabbitmq-server
-    image: rabbitmq:3-management
+    image: rabbitmq:3.6.1-management
     ports:
       - "5672:5672"  
       - "15672:15672"  
@@ -18,7 +18,7 @@ services:
       # that the server will start first!  Telling the pika client library
       # to try multiple times gets around this ordering issue.
       AMQP_URL: 'amqp://rabbitmq-server?connection_attempts=5&retry_delay=2'
-      SOURCE: '$SOURCE'
+      
 
     links:
       - rabbitmq-server
@@ -26,14 +26,18 @@ services:
   publisher:
     depends_on:
       - rabbitmq-server
+      - receiver
 
     # If needed, Docker Compose will automatically run Publisher/Dockerfile.
     build: publisher
     environment:
       AMQP_URL: 'amqp://rabbitmq-server?connection_attempts=5&retry_delay=2'
-      SOURCE: '$SOURCE'
+    ports:
+      - 5001:80  
     links:
       - rabbitmq-server
+      - receiver
+    
       
 
 
