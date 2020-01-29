@@ -1,4 +1,4 @@
-## Code Challenge
+## Rabbitmq
 ### Prerequisites
 * Docker
 
